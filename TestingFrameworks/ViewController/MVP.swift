@@ -1,0 +1,24 @@
+//
+//  MVP.swift
+//  TestingFrameworks
+//
+//  Created by Lainel John Dela Cruz on 13/03/2019.
+//  Copyright © 2019 Lainel John Dela Cruz. All rights reserved.
+//
+
+import Foundation
+
+protocol BaseView: class {
+}
+class BasePresenter {
+    weak var view: BaseView?
+    func attachView(view: BaseView) {
+        self.view = view
+    }
+    // no need to call this
+    // since view has a weak reference
+    func detachView() {
+        self.view = nil
+    }
+    
+}
