@@ -20,6 +20,7 @@ protocol APIVCView: BaseView{
 
 class APIVCPresenter: BasePresenter {
     private let disposeBag: DisposeBag
+    //object instance from basecode api
     private let movieRespository:MoviesRepository
     init(movieRespository: MoviesRepository) {
         self.movieRespository = movieRespository
@@ -28,8 +29,8 @@ class APIVCPresenter: BasePresenter {
     func getView() -> APIVCView? {
         return view as? APIVCView
     }
-    
     func getAllMovies(){
+        //call repository object from baseCodeAPI methods
         self.movieRespository.getMoviesWithLimit(limit: 100)
             .subscribe(onNext: { movies in
                 self.getView()?.successLoadAllMovie(movies: movies)

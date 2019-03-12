@@ -18,11 +18,9 @@ class PresentationAssembly: Assembly {
 
 extension SwinjectStoryboard {
     public static func setup() {
-        
         defaultContainer.storyboardInitCompleted(APIViewController.self){ (r, c) in
             c.presenter=r.resolve(APIVCPresenter.self);
         }
-        
     }
     
 }

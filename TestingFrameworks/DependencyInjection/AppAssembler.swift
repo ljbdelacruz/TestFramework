@@ -13,15 +13,16 @@ import BaseCodeAPI
 class AppAssembler{
     static let instance = AppAssembler()
     let assembler = try! Assembler(assemblies: [
+        //setting the repository dependency injection of the basecoderepo
         DataAssembly.instance,
         PresentationAssembly()
         ], container: SwinjectStoryboard.defaultContainer)
 }
 
 extension AppAssembler {
-    func initialViewController() -> ViewController {
+    func initialViewController() -> CellDemoViewController {
         let sb = SwinjectStoryboard.create(name: "Main", bundle: nil)
-        let vc = sb.instantiateInitialViewController() as! ViewController
+        let vc = sb.instantiateInitialViewController() as! CellDemoViewController
         return vc
     }
 }

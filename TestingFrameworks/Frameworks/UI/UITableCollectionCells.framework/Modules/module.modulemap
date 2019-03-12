@@ -1,0 +1,11 @@
+framework module UITableCollectionCells {
+  umbrella header "UITableCollectionCells.h"
+
+  export *
+  module * { export * }
+}
+
+module UITableCollectionCells.Swift {
+    header "UITableCollectionCells-Swift.h"
+    requires objc
+}

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import BaseCodeAPI;
+import BaseCodeAPI
 
 class APIViewController: UIViewController {
     var presenter:APIVCPresenter!;

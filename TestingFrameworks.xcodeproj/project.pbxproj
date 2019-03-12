@@ -24,6 +24,12 @@
 		EEB5C19D223811E800CE7087 /* MVP.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB5C19C223811E800CE7087 /* MVP.swift */; };
 		EEB5C1A02238125F00CE7087 /* AppAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB5C19F2238125F00CE7087 /* AppAssembler.swift */; };
 		EEB5C1A22238128E00CE7087 /* PresentationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB5C1A12238128E00CE7087 /* PresentationAssembly.swift */; };
+		EEB5C1C8223828AA00CE7087 /* UITableCollectionCells.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEB5C1C6223828A000CE7087 /* UITableCollectionCells.framework */; };
+		EEB5C1C9223828AA00CE7087 /* UITableCollectionCells.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EEB5C1C6223828A000CE7087 /* UITableCollectionCells.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EEB5C1CC223828E900CE7087 /* CellDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB5C1CB223828E900CE7087 /* CellDemoViewController.swift */; };
+		EEB5C1CE2238295F00CE7087 /* LanguageCell.nib in Resources */ = {isa = PBXBuildFile; fileRef = EEB5C1CD2238295F00CE7087 /* LanguageCell.nib */; };
+		EEB5C1D02238297100CE7087 /* RadioButtonCell.nib in Resources */ = {isa = PBXBuildFile; fileRef = EEB5C1CF2238297100CE7087 /* RadioButtonCell.nib */; };
+		EEB5C1D322382A1900CE7087 /* LanguageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB5C1D222382A1900CE7087 /* LanguageModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +41,7 @@
 			files = (
 				EEB5C15C2237F2FC00CE7087 /* UIViewComponents.framework in Embed Frameworks */,
 				EEB5C199223810D200CE7087 /* BaseCodeAPI.framework in Embed Frameworks */,
+				EEB5C1C9223828AA00CE7087 /* UITableCollectionCells.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -69,6 +76,11 @@
 		EEB5C19C223811E800CE7087 /* MVP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVP.swift; sourceTree = "<group>"; };
 		EEB5C19F2238125F00CE7087 /* AppAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembler.swift; sourceTree = "<group>"; };
 		EEB5C1A12238128E00CE7087 /* PresentationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationAssembly.swift; sourceTree = "<group>"; };
+		EEB5C1C6223828A000CE7087 /* UITableCollectionCells.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UITableCollectionCells.framework; sourceTree = "<group>"; };
+		EEB5C1CB223828E900CE7087 /* CellDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellDemoViewController.swift; sourceTree = "<group>"; };
+		EEB5C1CD2238295F00CE7087 /* LanguageCell.nib */ = {isa = PBXFileReference; lastKnownFileType = file; path = LanguageCell.nib; sourceTree = "<group>"; };
+		EEB5C1CF2238297100CE7087 /* RadioButtonCell.nib */ = {isa = PBXFileReference; lastKnownFileType = file; path = RadioButtonCell.nib; sourceTree = "<group>"; };
+		EEB5C1D222382A1900CE7087 /* LanguageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +92,7 @@
 				EEB5C198223810D200CE7087 /* BaseCodeAPI.framework in Frameworks */,
 				EEB5C19322380FD800CE7087 /* BaseCodeAPI.framework in Frameworks */,
 				5A73FAC0793094DCA85A258D /* Pods_TestingFrameworks.framework in Frameworks */,
+				EEB5C1C8223828AA00CE7087 /* UITableCollectionCells.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +137,7 @@
 		EEB5C0FF2236A71B00CE7087 /* TestingFrameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EEB5C1D122382A0E00CE7087 /* Model */,
 				EEB5C19E2238124F00CE7087 /* DependencyInjection */,
 				EEB5C1942238109B00CE7087 /* ViewController */,
 				EEB5C11D2236A92900CE7087 /* addons */,
@@ -150,6 +164,7 @@
 		EEB5C1132236A7B200CE7087 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				EEB5C1C6223828A000CE7087 /* UITableCollectionCells.framework */,
 				EEB5C1572237F22800CE7087 /* UIViewComponents.framework */,
 			);
 			path = UI;
@@ -158,6 +173,8 @@
 		EEB5C11D2236A92900CE7087 /* addons */ = {
 			isa = PBXGroup;
 			children = (
+				EEB5C1CF2238297100CE7087 /* RadioButtonCell.nib */,
+				EEB5C1CD2238295F00CE7087 /* LanguageCell.nib */,
 				EEB5C1592237F23B00CE7087 /* AppearingView.nib */,
 			);
 			path = addons;
@@ -166,6 +183,7 @@
 		EEB5C1942238109B00CE7087 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				EEB5C1CA223828CF00CE7087 /* CellVC */,
 				EEB5C195223810A100CE7087 /* APIVC */,
 				EEB5C19C223811E800CE7087 /* MVP.swift */,
 			);
@@ -188,6 +206,22 @@
 				EEB5C1A12238128E00CE7087 /* PresentationAssembly.swift */,
 			);
 			path = DependencyInjection;
+			sourceTree = "<group>";
+		};
+		EEB5C1CA223828CF00CE7087 /* CellVC */ = {
+			isa = PBXGroup;
+			children = (
+				EEB5C1CB223828E900CE7087 /* CellDemoViewController.swift */,
+			);
+			path = CellVC;
+			sourceTree = "<group>";
+		};
+		EEB5C1D122382A0E00CE7087 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EEB5C1D222382A1900CE7087 /* LanguageModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +287,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEB5C1D02238297100CE7087 /* RadioButtonCell.nib in Resources */,
+				EEB5C1CE2238295F00CE7087 /* LanguageCell.nib in Resources */,
 				EEB5C15A2237F23B00CE7087 /* AppearingView.nib in Resources */,
 				EEB5C10B2236A71C00CE7087 /* LaunchScreen.storyboard in Resources */,
 				EEB5C1082236A71C00CE7087 /* Assets.xcassets in Resources */,
@@ -368,8 +404,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEB5C19D223811E800CE7087 /* MVP.swift in Sources */,
+				EEB5C1D322382A1900CE7087 /* LanguageModel.swift in Sources */,
 				EEB5C1032236A71B00CE7087 /* ViewController.swift in Sources */,
 				EEB5C1A02238125F00CE7087 /* AppAssembler.swift in Sources */,
+				EEB5C1CC223828E900CE7087 /* CellDemoViewController.swift in Sources */,
 				EEB5C1A22238128E00CE7087 /* PresentationAssembly.swift in Sources */,
 				EEB5C1012236A71B00CE7087 /* AppDelegate.swift in Sources */,
 				EEB5C19B2238118B00CE7087 /* APIVCPresenter.swift in Sources */,
